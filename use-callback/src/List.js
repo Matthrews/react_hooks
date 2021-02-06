@@ -4,7 +4,7 @@ export default function List({ getItems }) {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        setItems(getItems())  
+        setItems(getItems(2))  
         console.log('Updating Itmes');
     }, [getItems])
 

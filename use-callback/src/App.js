@@ -14,8 +14,9 @@ export default function App() {
   // useCallback
   // 和useMemo类似
   // 但是useMemo返回函数值，而useCallback返回函数
-  const getItems = useCallback(() => {
-    return [number, number + 1, number + 2]
+  // 相同点：都解决了referential equality问题
+  const getItems = useCallback((incrementor) => {
+    return [number + incrementor, number + incrementor + 1, number + incrementor + 2]
   }, [number])
 
   const theme = {
