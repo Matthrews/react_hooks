@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 let renderedCounter = 1;
-function App() {
+function HookBpp() {
   // handle with object
   const [state, setState] = useState({ count: 4, theme: "Blue" });
   const { count, theme } = state;
 
   const decrementCount = () => {
     setState((prevState) => {
-      // setState的时候不是merge，而是override就对象，return 新对象
+      // hook setState的时候不是merge，而是override旧对象，return 新对象
       // class component是merge
       // return { count: prevState.count - 1 }
 
@@ -25,18 +25,25 @@ function App() {
     renderedCounter++;
   };
 
-  console.log(`Rendered ${renderedCounter} times`);
+  // console.log(`Rendered ${renderedCounter} times`);
   return (
     <div className="hook-version">
-      <button onClick={decrementCount}>-</button>
-      <span>{count} </span>
-      <span> {theme}</span>
-      <button onClick={incrementCount}>+</button>
+      <h2>Hook函数实现</h2>
+      <hr />
+      <div className="content">
+        <button onClick={decrementCount}>-</button>
+        <span>{count} </span>
+        <span> {theme}</span>
+        <button onClick={incrementCount}>+</button>
+      </div>
+      <hr />
+      <h2>Console输出</h2>
+      <span>{`Rendered ${renderedCounter} times`}</span>
     </div>
   );
 }
 
-export default App;
+export default HookBpp;
 
 // 推荐把对象拆成单个state便于管理
 // const [count, setCount] = useState(4);
