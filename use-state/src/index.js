@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import App from './App';
-import Bpp from './Bpp';
+import React from "react";
+import ReactDOM from "react-dom";
+import HookApp from "./HookApp";
+import ClassApp from "./ClassApp";
+// import Bpp from "./Bpp";
+import "./style.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Bpp />
+    <ClassApp />
+    <HookApp />
+    {/* <Bpp /> */}
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

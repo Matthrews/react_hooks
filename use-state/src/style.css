@@ -1,0 +1,23 @@
+#root {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.class-version,
+.hook-version {
+    flex: 1 1 0;
+    padding: 50px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #c5c5c5;
+}
+
+.class-version {
+    margin-right: 12px;
+}
+
+.content {
+    min-height: 200px;
+}
