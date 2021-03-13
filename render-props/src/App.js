@@ -12,16 +12,16 @@ function App() {
       {/* 组件间代码复用：组件使用prop属性控制什么应该被真正渲染【prop是一个逻辑函数】*/}
       {/* <User render={(isLoggedIn) => (isLoggedIn ? "Frank" : "Guest")} /> */}
 
-      <Counter
-        render={(count, incrementCount) => (
+      <Counter>
+        {(count, incrementCount) => (
           <ClickCounterOne count={count} incrementCount={incrementCount} />
         )}
-      />
-      <Counter
-        render={(count, incrementCount) => (
+      </Counter>
+      <Counter>
+        {(count, incrementCount) => (
           <HoverCounterOne count={count} incrementCount={incrementCount} />
         )}
-      />
+      </Counter>
     </div>
   );
 }
